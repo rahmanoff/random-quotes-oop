@@ -10,9 +10,10 @@ class RandomQuotesApp {
     this.init();
   }
   displayCurrentQuote() {
-    const { text, author } = this.currentQuote;
-    this.quoteTextElement.innerHTML = `"<em>${text}</em>"`;
-    this.quoteAuthorElement.innerHTML = `<b>${author}</b>`;
+    const { author } = this.currentQuote;
+    this.quoteTextElement.textContent = this.currentQuote.formatText();
+    this.quoteAuthorElement.textContent =
+      this.currentQuote.formatAuthor();
   }
 
   getRandomQuote() {
