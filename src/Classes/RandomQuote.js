@@ -8,15 +8,17 @@ class RandomQuote {
     const { id, text, author } = quotes[randomIndex];
     return new Quote(id, text, author);
   }
-  static getRandomQuoteViaAPI() {
+
+  static async getRandomQuoteViaAPI() {
     const url = 'http://api.quotable.io/random';
     const options = { headers: { 'Contrnt-Type': 'application/json' } };
-    return fetch(url, options)
-      .then((response) => response.json())
-      .then(
-        ({ _id: id, content, author }) => new Quote(id, content, author)
-      )
-      .catch((error) => console.error(error));
+    try {
+      const response = await fetch(url, options);
+      const { _id: id, content, author } = await response.json();
+      return new Quote(id, content, author);
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 
