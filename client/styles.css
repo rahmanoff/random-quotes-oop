@@ -85,6 +85,14 @@ span {
   background-color: #218838;
 }
 
+.btn-ternary {
+  background-color: #ffc107;
+}
+
+.btn-ternary:hover {
+  background-color: #ffb400;
+}
+
 .btn-danger {
   background-color: transparent;
   color: #f00;
