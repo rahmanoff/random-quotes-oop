@@ -1,5 +1,5 @@
 const config = {
-  PUBLIC_API_URL: 'https://api.quotable.io',
+  PUBLIC_API_URL: 'http://api.quotable.io',
   API_URL: 'http://localhost:3000',
 };
 
