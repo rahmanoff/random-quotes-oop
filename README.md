@@ -36,12 +36,13 @@ This project consist of a client-side Vanilla JavaScript app and server-side Exp
    `npm start`
 6. Configure hosting server where you run application to forward all requests to the
    http://localhost:3000
-7. Take assigned by the hosting provider URL for your backend API server for example
-   https://my-random-quotes-api.com and
+7. Take assigned by the hosting provider URL for your backend API server.
+   For example `https://random-quotes-api.com`
 
 ### Run client
 
 1. There no need to build the client as it already contents HTML, CSS and JS files.
-2. Host all client files from the `client` subfolder on the public web server
-
-   `npx live-server client`
+2. In the `client/src/config.js` replace `http://localhost:3000` with URL assigned to the server API in the step 7. of server section. For example `https://random-quotes-api.com`
+3. Host all client files from the `client` subfolder on the public web server
+4. Get assigned by the hosting provider URL for your client frontend application. For example `https://random-quotes-frontend.com`
+5. Open `https://random-quotes-frontend.com` in the web browser.
